@@ -11,7 +11,7 @@
     "fb:logout": "firebase logout",
     "fb:init": "firebase init",
     "fb:emuls": "firebase emulators:start --import=./exports --export-on-exit",
-    "fb:deploy": "firebase deplay"
+    "fb:deploy": "firebase deploy"
   },
   "dependencies": {
     "axios": "^0.27.2",

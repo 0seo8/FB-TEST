@@ -45,7 +45,12 @@ router.post('/', async (req, res) => {
   const {title, imageBase64} = req.body
   const date = new Date().toISOString()
 
-  const image = await saveFile(imageBase64)
+  let image = ''
+  try {
+    image = await saveFile(imageBase64)
+  } catch(error) {
+    console.log(error)
+  }
 
   const todo: Todo = {
     title,

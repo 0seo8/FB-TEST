@@ -79,7 +79,13 @@ router.put('/:id', async(req, res) => {
     return res.status(404).json('존재하지 않는 정보입니다.')
   }
 
-  const image = await saveFile(imageBase64)
+  // 스토리지에 파일 저장
+  let image = ''
+  try {
+    image = await saveFile(imageBase64)
+  } catch(error) {
+    console.log(error)
+  }
 
   const {createdAt} = snap.data() as Todo
   const updatedAt = new Date().toDateString

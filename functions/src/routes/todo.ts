@@ -71,7 +71,7 @@ router.post('/', async (req, res) => {
 
 //todo 수정
 router.put('/:id', async(req, res) => {
-  const {title, done, imageBase64} = req.body 
+  const { title, done, imageBase64 } = req.body 
   const {id} = req.params
 
   const snap = await db.collection('Todos').doc(id).get()
@@ -94,7 +94,7 @@ router.put('/:id', async(req, res) => {
     title,
     image,
     done,
-    updatedAt: new Date().toDateString()
+    updatedAt
   })
 
   return res.status(200).json({

@@ -15,9 +15,6 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "file-type": "^16.5.3",
-    "nanoid": "^3.3.4",
-    "validator": "^13.7.0",
     "version": "^0.1.2",
     "vue": "^3.2.37"
   },

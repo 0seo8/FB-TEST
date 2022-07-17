@@ -42,6 +42,15 @@ router.get('/', async (req, res) => {
 
 //todo추가
 router.post('/', async (req, res) => {
+
+  /*만약 제한을 걸고 싶은 경우 
+  const {apikey, username} = req.headers
+
+  if(apikey !== '1234qwer'||username !== 'heropy-admin') {
+    res.status(401).json('유효한 사용자가 아닙니다.')
+  }
+  */
+
   const {title, imageBase64} = req.body
   const date = new Date().toISOString()
 

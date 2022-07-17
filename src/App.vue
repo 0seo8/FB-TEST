@@ -8,7 +8,7 @@
 import {defineComponent} from 'vue'
 import axios from 'axios'
 
-export default defineComponent({
+export default defineComponent({  
   methods: {
     selectFile(event: Event) {
       const files = (event.target as HTMLInputElement).files as FileList

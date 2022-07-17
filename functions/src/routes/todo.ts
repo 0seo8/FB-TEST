@@ -131,4 +131,12 @@ router.delete('/:id', async(req, res) => {
   return res.status(200).json(true)
 })
 
+/*로그인
+router.post('/', async (req, res) => {
+  const {id, pw} = req.body
+  if(id === 'adim' && pw === '1234') {
+    //처리
+  }
+})
+*/
 export default router
